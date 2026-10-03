@@ -1,5 +1,4 @@
-let humanScore = 0
-let computerScore = 0
+
 
 function getComputerChoice() {
     const choice = Math.random();
@@ -21,7 +20,15 @@ function getHumanChoice() {
 }
 
 
-function playRound(humanChoice, computerChoice) {
+   const humanSelection = getHumanChoice();
+   const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
+function playGame() {
+   let humanScore = 0
+   let computerScore = 0
+   function playRound(humanChoice, computerChoice) {
 
    if (humanChoice === computerChoice) {
       console.log("It's a TIE!")
@@ -45,10 +52,8 @@ function playRound(humanChoice, computerChoice) {
 
 }
 
-   const humanSelection = getHumanChoice();
-   const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
 
+}
 
 
